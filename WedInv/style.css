@@ -1,0 +1,404 @@
+:root{
+    --darkblueish: rgb(32, 102, 102);
+    --bg: rgb(206, 178, 19);
+    --shadow: 0 2px 2px rgba(0,0,0,0.5);
+    
+    --script: "Dancing Script", cursive;
+    --krub: "Krub";
+
+}
+*{
+    max-width: 100% !important;
+}
+
+body{
+    font-size: 1.2rem;
+    font-family: var(--krub);
+    min-height: 2000px;
+}
+.stop-scroll{
+    height: 100%;
+    overflow:hidden;
+}
+.hero::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/bg-info.jpg);    
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+.hero , .guest-name{
+    font-size: 1.5rem;
+    color: var(--darkblueish);
+    text-shadow: 0 2px rgb(204, 201, 201);
+    font-weight: bolder;
+}
+.hero h1, .hero h4, .hero p{
+    text-shadow: var(--shadow);
+}
+
+.hero  h1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 6rem;
+}
+.hero p{
+    font-size: 1.5rem;
+}
+.hero a{
+    background-color: var(--darkblueish);
+    color: white;
+    transition: .5s ease-in-out;
+    margin-top: 30px;
+    text-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+.hero a:hover{
+    background-color: white;
+    color: var(--darkblueish)
+}
+
+.mynavbar{
+    background-color: rgba(255,255,255,0.2) !important;
+    backdrop-filter: blur(5px);
+}
+
+.mynavbar, .navbar-brand, .offcanvas-title{
+    font-family: var(--script);
+    font-size: 1.8rem;
+    transition: .5s ease-in-out;
+}
+.mynavbar .offcanvas{
+    height: 100vh;
+    width: 20vh;
+}
+.mynavbar, .navbar-brand, .offcanvas-title:hover{
+    color: gold;
+}
+.home{
+    background-image:url(img/bg-gold-less.png);
+    min-height: 100vh;
+    background-size: cover;
+    margin-top: -4.7rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    box-shadow: 0 0 30px black;
+}
+.home h2{
+    font-family: var(--script);
+    font-size: 5rem;
+    text-shadow: var(--shadow);
+    color: var(--darkblueish);
+}
+.home h3{
+    font-family: var(--krub);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.home .couple{
+    margin-top: 80px;
+    margin-right:10px;
+    margin-left: 10px;
+}
+.home .couple img.profile{
+    width: 220px;
+    height: 200px;
+    border: 13px solid rgb(216, 216, 216);
+}
+.home .couple p{
+    font-family: var(--krub);
+    font-weight: bold;
+    font-size: 12px;
+}
+.home .couple h3{
+    font-family: var(--script);
+    font-size: 2.3rem;
+    text-shadow: var(--shadow);
+    color: var(--darkblueish);
+}
+.home .couple a{
+    text-decoration: none;
+    font-family: var(--script);
+    transition: .5s ease-out;
+}
+.home .couple a:hover{
+    color: #ffff;
+}
+
+.info{
+    padding-top: 10rem;
+    padding-bottom: 12rem;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 30px var(--bg);
+    background-color: #f5f5f5;
+}
+.info h2{
+    color: var(--darkblueish);
+    font-family: var(--script);
+    text-shadow: var(--shadow);
+    font-size: 5rem;
+    padding-bottom: 10px;
+}
+.info .address{
+    font-family: var(--krub);
+    font-size: 1.3rem;
+}
+.info .mapsBtn{
+    border-color: rgb(201, 184, 87);
+}
+
+.info .card{
+    margin-top: 20px;
+    border-color: gold;
+    transition: .5s ease-out;
+    cursor: default;
+}
+.info .card:hover{
+    transform: scale(1.1);
+}
+.info .card > .card-header{
+    font-family: var(--script);
+    font-size: 1.5rem;
+}
+.info .card , span{
+    font-size: 14px;
+}
+
+.gallery h2{
+    color:var(--darkblueish);
+    font-size: 5rem;
+    font-family: var(--script);
+    padding-bottom: 10px;
+    text-shadow: var(--shadow);
+}
+
+.gallery{
+    background-image: url(img/bg-gold.png);
+    background-size: cover;
+    background-position-x: center;
+    min-height: 100vh;
+    padding-top: 80px !important;
+    padding-bottom: 30px !important;
+    box-shadow: 0 0 30px black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 5px;
+    justify-content: center;
+    align-items: center;
+}
+.gallery .column{
+    flex: 25%;
+    max-width: 25%;
+}
+.gallery .column img{
+    transition: .5s ease-out;
+    height: 400px;
+    width: auto;
+    margin: 5px;
+    box-shadow: 0 0 15px rgb(54, 53, 53);
+}
+.gallery .column img:hover{
+    transform: scale(1.1);
+}
+/* guest form */
+.guest-form{
+    min-height: 100vh;
+}
+.guest-form::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(img/bg-blueish.jpg);    
+    z-index: -1;
+    background-size: cover;
+    background-position: center;
+    filter: blur(1.5px);
+}
+.guest-form{
+    position: relative;
+    padding: 50px 0px;
+}
+.guest-form h2{
+    font-family: var(--script);
+    color: #ffff;
+    text-shadow: 0 5px rgb(107, 92, 92);
+    font-size: 3.5rem;
+    margin-bottom: 5vh;
+}
+.form-group{
+    text-align: left;
+    width: 500px;
+    color: white;
+    font-family: var(--krub);
+    font-weight: bold;
+    font-size: small;
+}
+.footer{
+    padding-top: 2rem;
+    min-height: 40vh;
+    background-image:url(img/footer.jpg);
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+.footer h3{
+    font-family: var(--script);
+    font-size: 2rem;
+    text-shadow: var(--shadow);
+    padding-top: 20px;
+}
+.footer ,p{
+    font-family: var(--krub);
+    padding-top: 10px;
+    font-size: 14px;
+}
+.wed-gifts{
+    min-height: 100vh;
+    background-image: url(img/bg-gold-less.png);
+    background-size: cover;
+    background-position: center;
+}
+.wed-gifts h2{
+    color: var(--darkblueish);
+    padding-top: 100px;
+    font-family: var(--script);
+    font-size: 4.2rem;
+    text-shadow: 0 3px rgb(214, 208, 208);
+}
+.qr-image{
+    /* border: 1px solid black; */
+    /* border-radius: 3%; */
+    width: 35%;
+    height: 420px;
+    align-items: center;
+    background-image: url(img/gold-b.png);
+    background-size: cover;
+    background-position: center;
+}
+.qr-image img {
+    height: 280px;
+    width: 300px;
+}
+#HCB_comment_box{
+    padding: 50px 120px;
+}
+#HCB_comment_box h3{
+    text-align: center;
+    font-size: 3rem;
+    font-family: var(--script);
+    color: var(--darkblueish);
+    text-shadow: var(--shadow);
+    
+}
+#HCB_comment_box .submit{
+    background-color: var(--darkblueish) !important;
+}
+
+#HCB_comment_box .home-desc > a{
+    color: white !important;
+    opacity: 0%;
+    pointer-events: none;
+}
+#HCB_comment_box .home-desc{
+    color: white;
+    opacity: 0%;
+}
+
+/* MEDIA QUERY */
+/* Desktop */
+@media (max-width: 992px){
+    html{
+        font-size: 80%;
+    }
+    .simply-countdown> .simply-section {
+       padding: 60px;
+    }
+    
+
+}
+/* tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 65%;
+    }
+    .simply-countdown> .simply-section {
+        padding: 40px;
+     }
+     .sticky-top{
+        overflow: hidden;
+     }
+     .simply-countdown>.simply-section .simply-amount,
+    .simply-countdown>.simply-section .simply-word {
+        font-size: 12px !important;
+    }
+    .form-group{
+        text-align: left;
+        width: 300px;
+        color: white;
+        font-family: var(--krub);
+        font-weight: bold;
+        font-size: small;
+    }
+    .form-group label{
+        font-size: 12px !important;
+    }
+    .qr-image img {
+        height: 180px;
+        width: 180px;
+    }
+    .qr-image{
+        width: 35%;
+        height: 280px;
+    }
+
+}
+/* mobile phone */
+@media (max-width: 476px){
+    html{
+        font-size: 50%;
+    }
+    .simply-countdown> .simply-section {
+        padding: 20px;
+     }
+     .home .couple img.profile{
+        width: 120px;
+        height: 150px;
+    }
+    .simply-countdown>.simply-section .simply-amount,
+    .simply-countdown>.simply-section .simply-word {
+        font-size: 12px !important;
+    }
+    .form-group{
+        text-align: left;
+        width: 300px;
+        color: white;
+        font-family: var(--krub);
+        font-weight: bold;
+        font-size: small;
+    }
+    .form-group label{
+        font-size: 12px !important;
+    }
+    .qr-image img {
+        height: 120px;
+        width: 120px;
+    }
+    .qr-image{
+        width: 40%;
+        height: 200px;
+    }
+}

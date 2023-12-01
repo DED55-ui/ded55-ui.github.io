@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="icon" type="image/x-icon" href="img/logo-t.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Krub:wght@300&display=swap" rel="stylesheet">
+
+    <!-- simplyCountdown -->
+    <link rel="stylesheet" href="countdown/simplyCountdown.theme.default.css"/>
+    <script src="countdown/simplyCountdown.min.js"></script>
+    
+    <!-- bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- AOS JS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css" />
+
+    <title>Reyn&Edeth</title>
+  </head>
+  <body>
+
+    <section id="hero" class="hero w-100 h-100 p-3 mx-auto text-center d-flex
+            justify-content-center align-items-center text-white
+        ">
+        <div class="main" data-aos="zoom-out" data-aos-duration="1200">
+            <h4>Kepada <span class="guest-name"></span></h4>
+            <h1> Reyn & Edeth</h1>
+            <p> Akan melangsungkan resepsi pernikahan dalam:</p>
+              <!-- countdown part -->
+              <div class="simply-countdown"></div>
+            <a href="#home" class="invite-btn btn btn-md" onclick=play()>Lihat undangan</a>
+            <audio id="music" src="sound/onlyYou.mp3" loop></audio>
+          
+        </div>
+    </section>
+
+    <nav class="navbar navbar-expand-md bg-transparent sticky-top mynavbar">
+      <div class="container">
+        <a class="navbar-brand" href="#hero">Wedding</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" 
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Wedding</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#info">Info</a>
+              <a class="nav-link" href="#gallery">Gallery</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <section id="home" class="home">
+      <div class="home-container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 text-center">
+            <h2 data-aos="fade-down" data-aos-duration="1200"> Acara Pernikahan</h2>
+            <h3 data-aos="fade-down" data-aos-duration="1200"> Diselenggarakan pada 20 Desember 2023</h3>
+          </div>
+        </div>
+
+        <div class="row couple ">
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-8 text-end" data-aos="zoom-in" data-aos-duration="1200">
+                <h3> Reynhold Felix Glory Arlooy</h3>
+                <p>Anak dari Bapak Alfaris Arlooy & Ibu Lies Pattinasarany</p>
+                <a href="https://www.instagram.com/holdthereyn/" target="_blank">
+                  <img src="img/instagram.png" style="max-height: 2em; width: 20px; ">@reyn</a>
+              </div>
+              <div class="col-4">
+                <img src="img/pria.jpeg" alt="mempelai pria" data-aos="fade-in" data-aos-duration="1800" class="img-responsive rounded-circle profile">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-4">
+                <img src="img/wanita.jpeg" alt="mempelai wanita" data-aos="fade-in" data-aos-duration="1800" class="img-responsive rounded-circle profile">
+              </div>
+              <div class="col-8" data-aos="zoom-in" data-aos-duration="1200">
+                <h3> Edeth Grace de Kock</h3>
+                <p>Anak dari Alm. Bapak Abraham de Kock & Alm. Ibu Johana Kayadoe</p>
+                <a href="https://www.instagram.com/_edgrace/" target="_blank">
+                  <img src="img/instagram.png" style="max-height: 2em; width: 20px;">@edeth</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 col-10 text-center">
+              <h2 data-aos="fade-up" data-aos-duration="1200">Informasi Acara</h2>
+              
+            </div>
+          </div>
+          
+          <div class="row justify-content-center mt-4">
+            <!-- CARD AKAD NIKAH -->
+            <div class="col-md-4 col-10" data-aos="zoom-in" data-aos-duration="1500">
+              <div class="card text-center text-bg-light">
+                <div class="card-header bg-white">
+                  Ibadah Pemberkatan
+                </div>
+                <div class="card-body">
+                  <div class="row justify-content-center">
+                    <div class="col-md-5">
+                      <i class="bi bi-clock d-block"></i>
+                      <span>14.00 - 16.00</span>
+                    </div>
+                    <div class="col-md-5">
+                      <i class="bi bi-calendar d-block"></i>
+                      <span>Rabu, 20 Desember 2023</span>
+                    </div>
+                    <div class="col-md-6 mt-3">
+                      <a href="https://maps.app.goo.gl/bWVqpsCafnDSHruR7" target="_blank" 
+                          class="btn btn-light btn-sm mapsBtn"><i class="bi bi-map"></i>  Buka Peta</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD RESEPSI -->
+          <div class="col-md-4 col-10" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="card text-center text-bg-light">
+              <div class="card-header bg-white">
+                Resepsi
+              </div>
+              <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-5">
+                    <i class="bi bi-clock d-block"></i>
+                    <span>18.00 - Selesai</span>
+                  </div>
+                  <div class="col-md-5">
+                    <i class="bi bi-calendar d-block"></i>
+                    <span>Rabu, 20 Desember 2023</span>
+                  </div>
+                  <div class="col-md-6 mt-3">
+                    <a href="https://maps.app.goo.gl/LhFpAZeX5wxTioQ86" target="_blank" 
+                        class="btn btn-light btn-sm mapsBtn"><i class="bi bi-map"></i>  Buka Peta</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+        
+
+    <section class="gallery" id="gallery">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-8 col-10 text-center">
+                <span data-aos="fade-down" data-aos-duration="1200">Memori Kisah Kami</span>
+                <h2 data-aos="fade-down" data-aos-duration="1500">Galeri Foto</h2>
+
+            </div>
+          </div>
+          
+          <div class="row justify-content-center text-center">
+            <!-- KUMPULAN FOTO-FOTO -->
+            <div class="col mt-3 column" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/A1.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/A2.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/A3.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/A4.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/B1.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/B2.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/B3.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/B4.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/C1.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/C2.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/C3.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+                <img src="img/gallery/C4.jpeg" alt="" class="img-fluid rounded" data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-out-cubic">
+            </div>           
+          </div>
+        </div>
+    </section>
+    
+    <section id="guest-form" class="guest-form" data-aos="fade-up" data-aos-duration="1800  ">
+      <div class="container">
+          <div class="row justify-content-center text-center">
+            <h2 data-aos="fade-up" data-aos-duration="1800  ">Konfirmasi Kehadiran</h2>
+
+              <div class="col-md-8 d-flex justify-content-center">
+                <form method="POST" 
+                      action="https://script.google.com/macros/s/AKfycbzA77d9ZQXvMIPjEsm2ulnt7Xs3yo1X4nS0f1pD8OFsv6OIh7qxN5QirhpsfJSRoa0/exec" 
+                      class="form-group" data-aos="fade-in" data-aos-duration="1800">
+                  <div class="form-group mb-3">
+                      <label for="name">Nama</label>
+                      <input type="text" id="name" name="nama" class="form-control" placeholder="Nama" required>
+                  </div>
+                  <div class="form-group mb-3">
+                      <label for="number">Jumlah</label>
+                      <input type="number" id="number" class="form-control" name="jumlah" placeholder="Jumlah" min="1" max="50" required>
+                  </div>
+                  <div class="form-group mb-3">
+                      <label for="status">Konfirmasi</label>
+                      <select class="form-select" name="status" id="status">
+                          <option selected disabled>Pilih Salah Satu Opsi</option>
+                          <option value="hadir">Hadir</option>
+                          <option value="tidak-hadir">Tidak Hadir</option>
+                      </select>
+                  </div>
+                  <div class="text-end">
+                      <button type="submit" class="btn btn-primary">Kirim</button>
+                  </div>
+                </form>
+              </div>
+
+          </div>
+      </div>
+    </section>
+
+    <!-- GIFTS -->
+    <section id="wed-gifts" class="wed-gifts" data-aos="fade-up" data-aos-duration="1800">
+        <div class="container">
+          <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                  <h2 data-aos="fade-in" data-aos-duration="1800"> Kirim Hadiah </h2>
+                    <p style="font-weight: bold;">Ungkapan Tanda Kasih</p>
+                </div>
+                <div class="row justify-content-center qr-image mt-2">
+                    <img src="img/saweria.png" class="img-fluid img-responsive">
+                </div>
+          </div>
+        </div>
+    </section>
+
+        <!-- begin wwww.htmlcommentbox.com -->
+    <div id="HCB_comment_box" data-aos="fade-down" data-aos-duration="1500"></div>
+    <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24IaKxnfIETzE8NoBGIADpq0"+"&opts=16798&num=10&ts=1701266543323");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})();</script>
+    <!-- end www.htmlcommentbox.com -->
+
+    <!-- FOOTER -->
+    <section id="footer" class="footer" data-aos="fade-up" data-aos-duration="2000">
+        <div class="container">
+          <div class="row justify-content-center"></div>
+            <div class="col-md-12 text-center">
+                <h3>Kehadiran Bapak/Ibu/Sdr/i Sangat Kami Nantikan </h3>
+                <p>Kami ucapkan terima kasih atas perhatian dan partisipasi yang Bapak/Ibu/Sdr/i berikan untuk acara ini</p>
+                
+                <img src="img/logo-t.png" class="img-fluid img-responsive" style="width: 220px;">
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+            crossorigin="anonymous"></script>
+
+    <script>
+      simplyCountdown('.simply-countdown', {
+            year: 2023, // required
+            month: 12, // required
+            day: 20, // required
+            hours: 0, // Default is 0 [0-23] integer
+            words: { //words displayed into the countdown
+                days: { singular: 'hari', plural: 'hari' },
+                hours: { singular: 'jam', plural: 'jam' },
+                minutes: { singular: 'menit', plural: 'menit' },
+                seconds: { singular: 'detik', plural: 'detik'}
+            },
+      });
+    </script>
+    
+    <script>
+        
+        const stickyTop = document.querySelector('.sticky-top');
+        const offCanvas =  document.querySelector('.offcanvas');
+        
+        offCanvas.addEventListener('show.bs.offcanvas', () =>{
+            stickyTop.style.overflow = 'visible';
+        })
+        
+        offCanvas.addEventListener('hidden.bs.offcanvas', () =>{
+            stickyTop.style.overflow = 'hidden';
+        });
+    </script>
+   
+    <!-- AOS JS script -->
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>
+      AOS.init();
+   </script>
+
+   <!-- AUDIO Function -->
+   <script>
+       const audio = document.getElementById('music'); 
+       function play(){
+          audio.play();
+       }
+   </script>
+
+  <!-- URL SEARCH PARAMS -->
+   <script>
+      const searchParams = new URLSearchParams(window.location.search);
+      const name = searchParams.get('name');
+      const container = document.querySelector('.guest-name');
+
+      container.innerText = name;
+      
+      const formName = document.querySelector("#name");
+          if(name !== null){
+              formName.value = name;
+          }else {
+            formName.value = "";
+          }
+   </script>
+
+   <!-- customize labels of htmlcommentbox.com -->
+<script>
+  /* This code goes ABOVE the main HTML Comment Box code!
+   replace the text in the single quotes below to customize labels.*/
+  hcb_user = {
+      /* L10N */
+      comments_header : 'Ucapan',
+      name_label : 'Nama',
+      content_label: 'Ketik di sini',
+      submit : 'Kirim',
+      logout_link : '',
+      admin_link : '',
+      no_comments_msg: '',
+      add:'Add your comment',
+      again: 'Kirim ucapan lagi?',
+      rss:'',
+      said:'said:',
+      prev_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_left.png" class="hcb-icon" title="previous page" alt="[prev]"/>',
+      next_page:'<img src="https://www.htmlcommentbox.com/static/images/arrow_right.png" class="hcb-icon" title="next page" alt="[next]"/>',
+      showing:'Showing',
+      to:'to',
+      website_label:'website (optional)',
+      email_label:'email',
+      anonymous:'Anonymous',
+      mod_label:'(mod)',
+      subscribe:'Email Me Replies',
+      add_image:'Add Image',
+      are_you_sure:'Do you want to flag this comment as inappropriate?',
+  
+      reply:'Balas',
+      flag:'',
+      like:'Suka',
+  
+      /* dates */
+      days_ago:'days ago',
+      hours_ago:'hours ago',
+      minutes_ago:'minutes ago',
+      within_the_last_minute:'within the last minute',
+  
+      msg_thankyou:'Thank you for commenting!',
+      msg_approval:'NOTE: This comment is not published until approved',
+      msg_approval_required:'Thank you for commenting! Your comment will appear once approved by a moderator.',
+  
+      err_bad_html:'Your comment contained bad html.',
+      err_bad_email:'Please enter a valid email address.',
+      err_too_frequent:'You must wait a few seconds between posting comments.',
+      err_comment_empty:'Your comment was not posted because it was empty!',
+      err_denied:'Your comment was not accepted.',
+      err_unknown:'Your comment was blocked for unknown reasons, please report this.',
+      err_spam:'Your comment was detected as spam.',
+      err_blocked:'Your comment was blocked by site policy.',
+  
+      /* SETTINGS */
+      MAX_CHARS: 8192,
+      PAGE:'', /* ID of the webpage to show comments for. defaults to the webpage the user is currently visiting. */
+      ON_COMMENT: function(){}, /* Function to call after commenting. */
+      RELATIVE_DATES:true /* show dates in the form "X hours ago." etc. */
+  };
+  </script>
+
+  </body>
+</html>
